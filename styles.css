@@ -154,13 +154,18 @@ main .card-container .card {
     color: var(--text-color);
     background-color: var(--background-color);
     border-radius: 6px;
-    padding: 2rem;
     margin: 0.25rem;
+    padding: 0.5rem;
     width: 600px;
     max-width: 100%;
 }
 
+main .card-container .card > :not(.card-image) {
+    margin: 0 .5rem;
+}
+
 main .card-container .card .card-image {
+    border-radius: 4px;
     width: 100%;
     aspect-ratio: 16/9;
     object-fit: cover;
