@@ -1,0 +1,171 @@
+/* Universal Color */
+:root {
+    --primary-color: #ff5733;
+    --secondary-color: #e14f2b;
+    --background-color: darkred;
+    --text-color: #fff;
+    --second-text-color: #333;
+    --third-text-color: #fbff00;
+    --overlay-color: rgba(0, 0, 0, .5);
+}
+
+/* Universal Sizing-Setting */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Universal Text-Setting */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.5;
+    font-size: 1rem;
+}
+
+/* Universal CTA */
+.cta {
+    background-color: var(--primary-color);
+    color: var(--second-text-color);
+    text-decoration: none;
+    font-weight: bold;
+    padding: 1rem;
+    border-radius: 6px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.cta:hover {
+    background-color: var(--secondary-color);
+    transform: scale(1.05);
+}
+
+.cta--second {
+    color: var(--primary-color);
+    background-color: transparent;
+    text-decoration: none;
+    font-weight: bold;
+    border: 2px solid var(--primary-color);
+    padding: calc(1rem - 2px);
+    border-radius: 6px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.cta--second:hover {
+    background-color: var(--secondary-color);   
+    color: var(--text-color);   
+    transform: scale(1.05);
+}
+
+/* Header and Navigation */
+header {
+    background-color: var(--background-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+header .logo {
+    color: var(--text-color);
+    font-weight: bold;
+    font-size: 1.25rem;
+}
+
+header nav .list {
+    list-style: none; /**/
+    display: flex;
+    gap: 1rem;
+}
+
+header nav .list .list--items {
+    font-size: 1rem;
+}
+
+header nav .list .list--items a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: bold;
+    padding: 1rem;
+}
+
+header nav .list .list--items a:hover {
+    color: var(--third-text-color);
+    text-decoration: underline;
+}
+
+header nav .list .list--items a:focus {
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    outline: none;
+    border-radius: 6px;
+}
+
+/* Hero */
+.hero {
+    background: url(https://ams3.digitaloceanspaces.com/web01.ho-sting/videogamesartwork_com/public/concept-art/1613569019/cyberpunk-2077--environment--beyond-blackwall-01--by-marcin-tomalak.jpg) center/cover;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    color: white;
+    height: 60vh;
+    padding: 2rem;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.hero * {
+    position: relative;
+    z-index: 2;
+}
+
+.hero > * {
+    max-width: 800px;
+    padding: 1rem;
+}
+
+.hero .cta-container {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+/* main content */
+
+main .card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.25rem;
+}
+
+main .card-container .card {
+    display: flex;
+    flex-direction: column;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    border-radius: 6px;
+    padding: 2rem;
+    margin: 0.25rem;
+    width: 600px;
+    max-width: 100%;
+}
+
+main .card-container .card .card-image {
+    width: 100%;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+}
+
+
+
+
